@@ -11,13 +11,13 @@ body {
 }
 
 
-.add {
+#add {
     position: fixed;
     top: 1rem;
     right: 1rem;
     text-align: right;
-    color: cadetblue;
-    background-color: antiquewhite;
+    color: white;
+    background-color: steelblue;
     border: none;
     border-radius: 5px;
     padding: 0.5rem 1rem;
@@ -25,22 +25,21 @@ body {
 }
 
 
-
-
 .note {
-    background-color: #fff;
+    background-color: white;
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
     margin: 20px 30px;
-    height: 400px;
+    height: 20px;
     width: 400px;
 
 }
 
 .note .note-buttons {
-    background-color: lightblue;
+    background-color: lightsteelblue;
     display: flex;
     justify-content: flex-end;
-    padding: 0.5rem;
+
+    padding-top: 0.3rem;
 }
 
 .note .note-buttons button {
@@ -52,11 +51,12 @@ body {
 }
 
 .note textarea {
+    background-color: white;
     outline: none;
     font-family: inherit;
     font-size: 1.2rem;
     border: none;
-    height: 360px;
+    height: 400px;
     width: 100%;
     padding: 20px;
 }
