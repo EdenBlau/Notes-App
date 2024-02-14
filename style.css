@@ -1,5 +1,5 @@
 * {
-    background-color: whitesmoke;
+    background-color: snow;
     box-sizing: border-box;
 }
 
@@ -17,7 +17,7 @@ body {
     right: 1rem;
     text-align: right;
     color: white;
-    background-color: steelblue;
+    background-color: rgb(237, 164, 104);
     border: none;
     border-radius: 5px;
     padding: 0.5rem 1rem;
@@ -35,11 +35,10 @@ body {
 }
 
 .note .note-buttons {
-    background-color: lightsteelblue;
+    background-color: white;
     display: flex;
     justify-content: flex-end;
-
-    padding-top: 0.3rem;
+    padding-top: 0.5rem;
 }
 
 .note .note-buttons button {
@@ -51,7 +50,7 @@ body {
 }
 
 .note textarea {
-    background-color: white;
+    background-color: rgb(181, 195, 214);
     outline: none;
     font-family: inherit;
     font-size: 1.2rem;
