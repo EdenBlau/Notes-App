@@ -1,40 +1,46 @@
 const addBtn = document.getElementById('add');
-
-addBtn.addEventListener('click', addNewNote);
+addBtn.addEventListener('click', () => addNewNote());
 
 function addNewNote(text = '') {
-    const newNote = document.createElement('div');
-    newNote.classList.add('note');
+    const note = document.createElement('div');
+    note.classList.add('note');
 
-    newNote.innerHTML = `
+    note.innerHTML = `
         <div class="note-buttons">
-            <button class="edit" alt="edit">
+            <button class="edit">
                 <img src="/images/edit-icon.jpg" width="25px" height="20px">
             </button>
-            <button class="delete" alt="delete>
+            <button class="delete">
                 <img src="/images/delete-icon.jpg" alt="delete" width="35px" height="20px">
             </button>
         </div>
-        <div class="main ${text ? "" : "hidden"}></div>
-        <textarea class="${text ? "hidden" : ""}></textarea>
+        
+        <div class="main ${text ? "" : "hidden"}"></div>
+        <textarea class="${text ? "hidden" : ""}"></textarea>
+
         `;
 
-    document.body.appendChild(newNote);
 
-    const editBtn = newNote.querySelector('.edit');
-    const deleteBtn = newNote.querySelector('.delete');
-    const main = newNote.querySelector('.main');
-    const textArea = newNote.querySelector('textarea');
+
+    const editBtn = note.querySelector('.edit');
+    const deleteBtn = note.querySelector('.delete');
+    const main = note.querySelector('.main');
+    const textArea = note.querySelector('textarea');
+
 
     deleteBtn.addEventListener('click', () => {
-        newNote.remove()
+        note.remove();
     });
 
-    // editBtn.addEventListener('click', () => {
-    //     main.classList.toggle('hidden');
-    //     textArea.classList.toggle('hidden');
-    // });
+    editBtn.addEventListener('click', () => {
+        main.classList.toggle('hidden');
+        textArea.classList.toggle('hidden');
+    });
 
+    textArea.addEventListener('input', (e) => {
+        const { value } = e.target;
+        main.innerHTML = marked(value);
+    });
 
-
+    document.body.appendChild(note);
 }
