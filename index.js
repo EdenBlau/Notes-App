@@ -6,7 +6,9 @@ function addNewNote(text = '') {
     note.classList.add('note');
 
     note.innerHTML = `
+    
         <div class="note-buttons">
+            <input type="text" class="title"></input>
             <button class="edit">
                 <img src="/images/edit-icon.jpg" width="25px" height="20px">
             </button>

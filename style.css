@@ -29,7 +29,7 @@ body {
     background-color: snow;
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
     margin: 30px 20px;
-    height: auto;
+    height: 400px;
     width: 350px;
     display: inline-flexbox;
 }
@@ -40,7 +40,18 @@ body {
     display: flex;
     justify-content: flex-end;
     padding-top: 0.5rem;
+    margin-left: 5px;
 }
+
+.note .note-buttons .title {
+    border: 1px solid black;
+    background-color: white;
+    padding: 5px;
+    margin-bottom: 5px;
+    padding-right: 80px;
+}
+
+
 
 .note .note-buttons button {
     background-color: transparent;
